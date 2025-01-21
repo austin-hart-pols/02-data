@@ -1,9 +1,9 @@
-# Week 1: Intro to scientific inquiry
+# Week 2: Data and Measurement
 
 
 ### Agenda
 
-- Purpose of the course  
-- "Basement Tapes" discussion  
-- Syllabus  
-- Logic and structure of empirical research  
+- Link between quality of findings and data
+- Modes of collection
+- Sampling, error, and bias
+- Measurement and error

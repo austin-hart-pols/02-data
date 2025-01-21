@@ -40,176 +40,187 @@ knitr::include_graphics("assets/classlogo.png")
 ]
 
 .pull-right[
-# 01 - Introductions
+# 02 - Data and measurement
 
-- Purpose of the course
+- Measurement scales
 
-- "Basement Tapes" discussion
+- Modes of collecting data
 
-- Syllabus, etc
+- Computing with R
 
-- Scientific inquiry
+- *DUE TODAY: SKILLS BUILDER*
 
 ]
 
 
 ---
-# What's the purpose of this course?
+class: inverse
+
+# Why data matters
+
+&nbsp;
+
+> The quality of your findings cannot exceed the quality of your data.
+
+&nbsp;
+
+### Evaluating findings
+
+1. Measurement validity  
+2. Internal validity   
+3. External validity   
+
+
+---
+# What's in your dataset?
+
+- **Dataset** A structured collection of empirical information. Typically organized as a rectangular file that contains $k$ variables about $n$ units (cases).
+
+- **Variable** Any measurable characteristic of a unit under study. 
+
+- **Score** Possible value of a variable.
+
+- **Units** The cases being observed in a study. Ex: Reading score of elementary students. Reading score is the variable. The students are the units whose scores we measure.  
+
+
+---
+# What type of variable is that?
+### Measurement scales
+
+- Quantitative (numeric-valued) or Categorical?
+
+- Nominal, ordinal, or interval?
+
+- Discrete or continuous?
+
+
+---
+# Is that a valid instrument?
+### Where good measures go bad
+
+1. Face Validity
+  - Extent to which a measure appears to assess what it is supposed to.
+  - Does the measure look reasonable and appropriate to experts or participants?
+
+2. Content Validity
+  - Degree to which a measure covers the full range of the concept.
+  - Does the measure include all important facets of the concept?
+
+3. Construct Validity
+  - Extent to which a measure accurately represents the concept it is intended to measure.
+  - Is the measure aligned with related constructs and distinct from unrelated ones?
+
+
+
+---
+# How did you generate your data?
+### Modes of collection
+
+- Experiments: randomization and manipulation.  
+  - Pros: maximizes potential internal validity  
+  - Concerns: ethics, feasibility.  
+- Observational research: Observes and record.  
+  - Pros: more available, measures phenomenon in "natural" setting 
+  - Concerns: internal validity  
+
+- What about external validity?
+  - Function of researcher's intention. What's the aim? 
+  - Less dependent on mode of data collection
+  
+  
+---
+# How did you select cases for the study?
+### Sampling and common problems
+
+- Virtue of random sampling  
+  - Random sample: units selected from sample frame with known probability.  
+  - Sample is representative of population
+
+- Concerns about samples    
+  - Non-probability sample: unrepresentative
+  - Random sampling error: sample stats differ because samples differ
+  - Non-response bias: Missing data typically not missing at random  
+
+
+---
+# Overview: Evaluating research
 
 .pull-left[
-### Introduce empirical research
-
-- **STATISTICS**
-  - Field concerned with collecting and analyzing data  
-  - Focused on variation and uncertainty
-
-- **THE RESEARCH PROCESS**  
-  - Roots in the scientific project  
-  - From question to findings  
-  - Evaluating research
-
-
+### Concerns    
+- Measurement validity  
+- Internal validity  
+- External validity
 ]
 
 .pull-right[
-### Support University mission
-
-- Research is the best of what we do
-
-- Asking and answering questions is still a radical act!
-
-- Scientific inquiry *can* support and strengthen free-thinking society
+### Role of data
+- Measurement scales and instrument design  
+- Sampling methods  
+- Mode of collection (type of study design)  
 ]
-
-
----
-# Basement Tapes
-### In-class discussion
-
-1. What theory motivates Frantz’s study? Identify the key cause and the outcome he seeks to explain.  
-2. What did Frantz know from prior studies, and why were those findings seen as incomplete or insufficient?  
-3. How does Frantz test his core hypothesis? Be specific about the design of his elaborate study.  
-4. What do his results show? What are we to make of the findings? 
-
-For reference: [podcast](https://www.pushkin.fm/podcasts/revisionist-history/the-basement-tapes#play) (S2E10) and [study results](https://www.ahajournals.org/doi/pdf/10.1161/01.atv.9.1.129)
-
----
-# Get to know the course
-
-- Let's visit the [living course syllabus](https://docs.google.com/document/d/1V5JLruDU9m9_eSnQqXQZ5-yDZCGlc9GZOQsVNcf3C7Q/edit?usp=sharing)
-
-- Expectations for class  
-  - We begin on time  
-  - Take notes and ask questions  
-  - Leave Slacks, chats, etc. behind
-
-- Outside of class  
-  - Do the reading  
-  - Give yourself time to do assignments  
-  - Be in touch!  
-
----
-class: inverse, middle
-
-# Foundations of scientific inquiry
-
-1. Where does science come from?  
-2. What defines scientific research?  
-
-
----
-# Origins of the modern scientific project
-
-.pull-left[
-
-```{r, out.width="70%"}
-knitr::include_graphics("assets/bacon.jpg")
-```
-
-]
-
-.pull-right[
-
-### Bacon's new empiricism
-
-- Knowledge through observation and experimentation
-
-- Inductive reasoning
-  - Move from specific to general 
-  - Probabilistic claims    
-  - Conclusions open to new evidence
   
-- Progress by rejecting bad ideas 
-
-]
 
 ---
-# Logic and structure of scientific inquiry
+class: inverse
 
-.panelset[
-.panel[.panel-name[Process]
+# Intro to R
 
-- Question and expectations
+### What you need
+- R Studio (and R) installed.   
+- Create an SIS 600 folder, e.g., in documents.  
+- Download the Quality of Government data (standard cross section, `.csv`).  
+- Save to your 600 folder.
+- Open the codebook.  
 
-- Study 
-  - Research design (plan)  
-  - Data collection  
-  - Analysis  
-  
-- Report findings  
 
-- New questions
-
-]
-
-.panel[.panel-name[Question]
+---
+# A first session
 
 .pull-left[ 
-- Study "effects of causes"
-  - Exposure variable: cause, $X$
-  - Outcome variable: effect, $Y$
+1. Open R Studio. Look around.
 
-- Theory: what we *think* we know about $X \rightarrow Y$
+2. Create a new script file. 
+  - Load packages.  
+  - Set directory.  
+  - Open QoG data.  
+  - Analyze something!
 
-- Hypotheses: observable implications of theory
+3. Save script, and quit.
+
 ]
 
 .pull-right[
+```{r, eval = F, echo = T}
+# Austin H
+# R first session
 
-> **Theories** are general stories about the way things work. 
-
-> **Hypotheses** are specific predictions, derived from theory, about what we should see in the data.
-
-]
-]
-
-.panel[.panel-name[Study]
-
-- Research design
-  - *Experiment (RCT)*: the researcher exposes units to different values of treatment at random.    
-  - *Observational*: the researcher observes and records values of the variables as they are.  
-
-- Data collection  
-
-- Statistical analysis  
-  - Characterize the relationship  
-  - Is it systematic? 
-
+# Packages and directory
+  library(tidyverse)
+  setwd("~/Documents/SIS 600/")
+  
+# Open .csv data
+  df <- read_csv("qog_std_cs_jan24.csv")
+  
+# Analyze data on one variable!
+  summary(df$wdi_wip)
+```
 ]
 
-.panel[.panel-name[Report]
 
-- Answer your question given the analysis
+---
+# Now you try
 
-- Consider the validity of your conclusion  
-  - Internal validity: have you ruled out alternative explanations and sources of bias?  
-  - External validity: do the results generalize to other cases, places, treatments, and outcomes?
+> I want to study wealth disparities across nations. I'm using the QoG dataset. I select `wdi_gdpcapgr` as my measure.
 
-- What do your findings mean for extant theory?
+1. Describe the data set. 
 
-]
-]
+2. What kind of measure is `wdi_gdpcapgr`?
 
+3. Open the data in R Studio
+
+4. Summarize the data on the variable.  
+
+5. Evaluate the variable as a measure of development.
 
 
 
